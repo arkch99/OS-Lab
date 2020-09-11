@@ -1,4 +1,5 @@
 # OS-Lab
 A repository of all my 5th sem OS lab assignments .
 
-The file "WORK.txt" in each folder contains my solution.
+* For assignment 1: The file "WORK.txt" contains my solutions.
+* For assignment 2: Outputs are provided as comments in the script files.
