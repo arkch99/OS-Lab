@@ -1,0 +1,3 @@
+I am a boy.
+I am supposed to search for all occurences of "I am a boy" in a text file as part of my Operating Systems lab. I am impressed with the grep command by which I can quickly ascertain how many times in this file I assert being a boy.
+I would like to state again that i am a boy.

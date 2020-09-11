@@ -1,0 +1,2 @@
+sentence1 is a sentence
+sentence2 is a sentence too

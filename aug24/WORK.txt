@@ -1,0 +1,146 @@
+1)
+arko@arko:~/os_lab/aug24$ touch empty1 empty2 empty3 empty4 empty5
+
+2)
+arko@arko:~/os_lab/aug24$ touch text.txt
+arko@arko:~/os_lab/aug24$ echo "Arkoprobho Chatterjee, 20, 83 Banamali Banerjee Road" > text.txt
+
+3)
+arko@arko:~/os_lab/aug24$ cat text.txt 
+Arkoprobho Chatterjee, 20, 83 Banamali Banerjee Road
+
+4)
+arko@arko:~/os_lab/aug24$ cp text.txt newtext.txt
+arko@arko:~/os_lab/aug24$ cat newtext.txt 
+Arkoprobho Chatterjee, 20, 83 Banamali Banerjee Road
+
+5) 
+arko@arko:~/os_lab/aug24$ cat > matter.txt
+sentence1 is a sentence
+sentence2 is a sentence too
+arko@arko:~/os_lab/aug24$ cat matter.txt 
+sentence1 is a sentence
+sentence2 is a sentence too
+
+6) 
+arko@arko:~/os_lab/aug24$ cat text.txt matter.txt > txtmat.txt
+arko@arko:~/os_lab/aug24$ cat txtmat.txt
+Arkoprobho Chatterjee, 20, 83 Banamali Banerjee Road
+sentence1 is a sentence
+sentence2 is a sentence too
+
+7)
+arko@arko:~/os_lab/aug24$ rm text.txt
+arko@arko:~/os_lab/aug24$ ls
+empty1  empty2  empty3  empty4  empty5  matter.txt  newtext.txt  txtmat.txt
+
+8)
+arko@arko:~/os_lab/aug24$ chmod 666 newtext.txt
+arko@arko:~/os_lab/aug24$ ls -l | grep newtext
+-rw-rw-rw- 1 arko arko  53 Sep 10 16:14 newtext.txt
+
+9)
+arko@arko:~/os_lab/aug24$ mv newtext.txt oldtext.txt
+
+10)
+arko@arko:~/os_lab/aug24$ mkdir mydir
+
+11)
+arko@arko:~/os_lab/aug24$ mv oldtext.txt matter.txt mydir
+arko@arko:~/os_lab/aug24$ ls
+empty1  empty2  empty3  empty4  empty5  mydir  txtmat.txt
+arko@arko:~/os_lab/aug24$ ls mydir
+matter.txt  oldtext.txt
+
+12)
+arko@arko:~/os_lab/aug24$ mkdir newdir
+
+13)
+arko@arko:~/os_lab/aug24$ cp mydir/* newdir
+arko@arko:~/os_lab/aug24$ ls
+empty1  empty2  empty3  empty4  empty5  mydir  newdir  txtmat.txt
+arko@arko:~/os_lab/aug24$ ls mydir/
+matter.txt  oldtext.txt
+arko@arko:~/os_lab/aug24$ ls newdir/
+matter.txt  oldtext.txt
+
+14)
+arko@arko:~/os_lab/aug24$ date +%d/%m/%Y
+10/09/2020
+
+15)
+arko@arko:~/os_lab/aug24$ who
+arko     :0           2020-09-10 14:18 (:0)
+
+16)
+tree /* 
+Output too large to show
+
+17) arko@arko:~/os_lab/aug24$ who | wc -l
+1
+
+18)
+rmdir xyz fails to work if xyz is not empty1
+
+19)
+If run without arguments, cd moves to the home directory
+
+20)
+a)
+arko@arko:~/os_lab/aug24$ cut -d "|" -f 1,3 data.txt
+1|CSE
+2|EE
+3|CSE
+4|CSE
+5|CSE
+6|IT
+7|ECE
+8|EE
+9|IT
+10|ECE
+b)
+arko@arko:~/os_lab/aug24$ sort -t "|" -k 2 data.txt
+10|NameA|ECE|HOD3
+8|NameB|EE|HOD4
+6|NameC|IT|HOD2
+5|NameD|CSE|HOD1
+4|NameE|CSE|HOD1
+9|NameF|IT|HOD2
+3|NameG|CSE|HOD1
+2|NameH|EE|HOD4
+7|NameI|ECE|HOD3
+1|NameJ|CSE|HOD1
+
+
+21)
+arko@arko:~/os_lab/aug24$ grep -c "I am a boy" data2.txt
+2
+arko@arko:~/os_lab/aug24$ grep -h "I am a boy" data2.txt
+I am a boy.
+I am supposed to search for all occurences of "I am a boy" in a text file as part of my Operating Systems lab. I am impressed with the grep command by which I can quickly ascertain how many times in this file I assert being a boy.
+arko@arko:~/os_lab/aug24$ grep -i "I am a boy" data2.txt
+I am a boy.
+I am supposed to search for all occurences of "I am a boy" in a text file as part of my Operating Systems lab. I am impressed with the grep command by which I can quickly ascertain how many times in this file I assert being a boy.
+I would like to state again that i am a boy.
+arko@arko:~/os_lab/aug24$ grep -n "I am a boy" data2.txt
+1:I am a boy.
+2:I am supposed to search for all occurences of "I am a boy" in a text file as part of my Operating Systems lab. I am impressed with the grep command by which I can quickly ascertain how many times in this file I assert being a boy.
+arko@arko:~/os_lab/aug24$ grep -v "I am a boy" data2.txt
+I would like to state again that i am a boy.
+{note: the phrase "I am a boy" was highlighted in red}
+
+22)
+arko@arko:~/os_lab/aug24$ cat > data3.txt
+5 
+2
+4
+3
+1
+arko@arko:~/os_lab/aug24$ sort data3.txt 
+1
+2
+3
+4
+5
+
+
