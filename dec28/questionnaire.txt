@@ -1,0 +1,15 @@
+1) a child process is an exact copy of some process(the parent), created from it via the fork() system call (in UNIX). The child and the parent have different address spaces.
+
+2) The fork() system call is used to create a copy of a process. It returns a range of values - 0 on successful forking to the child, a positive value to the parent, and -1 if any error occurs.
+
+3) The pid of a process(obtained using getpid()) is used to uniquely identify it. For programs utilising multiple processes, it can be used to identify which process is currently running. 
+The ppid of a process is the pid of its parent process. Similar to the pid, it can be used to identify which the currently runnign process, and can also be helpful to detect if a process has been orphaned.
+
+4) A process is called a zombie if it has completed execution, but if its traces are left behind(such as a process table entry). 
+On running ps, zombies are listed with a "defunct" next to their entry.
+
+5)An orphan process is a running process whose parent has terminated.
+
+An orphan is a complete process in its own right, while a zombie is a terminated prcess that still uses its pid(but no other resource). Orphans are common in routine execution, while zombies are typically(not always) the result of some anomalous situation.
+
+The existence of an orphan process may be demonstrated by logging its ppid at various points of its execution. If they differ, then we can say that it has been orphaned.
