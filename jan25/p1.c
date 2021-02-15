@@ -211,3 +211,40 @@ int main(int argc, char *argv[])
 
 	return 0;
 }
+
+// arko@arko:~/os_lab/jan25$ ./p1 25 50 100 75
+
+// Initially, the list is:
+
+// @:0 -> X:50 -> 0:75 -> Y:150 -> 0:175 -> Z:300 -> END
+
+// Enter strategy:
+// 1 - First fit
+// 2 - Best fit
+// 3 - Worst fit
+// 1
+// @:0 -> X:50 -> A:25 -> B:50 -> Y:150 -> C:100 -> D:75 -> Z:300 -> END
+// arko@arko:~/os_lab/jan25$ ./p1 25 50 100 75
+
+// Initially, the list is:
+
+// @:0 -> X:50 -> 0:75 -> Y:150 -> 0:175 -> Z:300 -> END
+
+// Enter strategy:
+// 1 - First fit
+// 2 - Best fit
+// 3 - Worst fit
+// 2
+// @:0 -> X:50 -> A:25 -> B:50 -> Y:150 -> C:100 -> D:75 -> Z:300 -> END
+// arko@arko:~/os_lab/jan25$ ./p1 25 50 100 75
+
+// Initially, the list is:
+
+// @:0 -> X:50 -> 0:75 -> Y:150 -> 0:175 -> Z:300 -> END
+
+// Enter strategy:
+// 1 - First fit
+// 2 - Best fit
+// 3 - Worst fit
+// 3
+// @:0 -> X:50 -> D:75 -> Y:150 -> A:25 -> B:50 -> C:100 -> Z:300 -> END
